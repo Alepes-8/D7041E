@@ -20,7 +20,6 @@ dimension = 50 # parameter for Word2vec size of vectors for word embedding
 
 threshold = 0.00055 # parameter for Word2vec
 
-
 sum = 0.0
 
 # 
