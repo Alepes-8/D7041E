@@ -5,12 +5,18 @@ import nltk
 
 #@author: The first version of this code is the courtesy of Vadim Selyanik
 
+import os
+
+cwd = os.getcwd()  # Get the current working directory (cwd)
+files = os.listdir(cwd)  # Get all the files in that directory
+print("Files in %r: %s" % (cwd, files))
+
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 lemmatizer = nltk.WordNetLemmatizer() # create a lemmatizer
 
 sentences = []
-file = open("lemmatized.text", "r")
+file = open('lab5/GensimW2V/lemmatized.text', "r")
 
 for line in file: # read the file and create list which contains all sentences found in the text
     sentences.append(line.split())
@@ -23,22 +29,21 @@ threshold = 0.00055 # parameter for Word2vec
 sum = 0.0
 
 # 
-model = gensim.models.Word2Vec(sentences, min_count=1, sample=threshold, sg=1,size=dimension) # create model using Word2Ve with the given parameters
+model = gensim.models.Word2Vec(sentences, min_count=1, sample=threshold, sg=1, vector_size=dimension) # create model using Word2Ve with the given parameters
 #
-print(len(model.vocab)) # check the length of the vocabulary which was formed by Word2Vec
+print(len(model.wv)) # check the length of the vocabulary which was formed by Word2Vec
 
 #The rest implements passing TOEFL tests
 i = 0 #counter for TOEFL tests
 number_of_tests = 80
-text_file = open('new_toefl.txt', 'r')
+text_file = open('lab5/GensimW2V/new_toefl.txt', 'r')
 right_answers = 0 # variable for correct answers
 number_skipped_tests = 0 # some tests could be skipped if there are no corresponding words in the vocabulary extracted from the training corpus
 while i < number_of_tests:
             line = text_file.readline() #read line in the file
             words = line.split() # extract words from the line
             try:
-                words = [lemmatizer.lemmatize(lemmatizer.lemmatize(lemmatizer.lemmatize(word, 'v'), 'n'), 'a') for word in
-                         words] # lemmatize words in the current test
+                words = [lemmatizer.lemmatize(lemmatizer.lemmatize(lemmatizer.lemmatize(word, 'v'), 'n'), 'a') for word in words] # lemmatize words in the current test
                 vectors = []
                 if words[0] in model: # check if there embedding for the query word
                     k = 1 #counter for loop iterating over 5 words in the test
