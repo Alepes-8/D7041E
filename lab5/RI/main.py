@@ -5,13 +5,13 @@ import nltk
 #@author: The first version of this code is the courtesy of Vadim Selyanik
 
 threshold = 15000 # Frequency threshold in the corpus ??
-dimension = 2000 # Dimensionality for high-dimensional vectors
+dimension = 1000 # Dimensionality for high-dimensional vectors
 lemmatizer = nltk.WordNetLemmatizer()  # create an instance of lemmatizer
 ones_number = 2 # number of nonzero elements in randomly generated high-dimensional vectors
 window_size = 2 #number of neighboring words to consider both back and forth. In other words number of words before/after current word
 zero_vector = np.zeros(dimension)
-test_name = "new_toefl.txt" # file with TOEFL dataset
-data_file_name = "lemmatized.text" # file with the text corpus
+test_name = "lab5/RI/new_toefl.txt" # file with TOEFL dataset
+data_file_name = "lab5/RI/lemmatized.text" # file with the text corpus
 
 amount_dictionary = {}
 
@@ -30,9 +30,6 @@ text_file.close()
 dictionary = {} #vocabulary and corresponing random high-dimensional vectors
 word_space = {} #embedings
 
-
-
-
 #Create a dictionary with the assigned random high-dimensional vectors
 text_file = open(data_file_name, "r")
 for line in text_file: #read line in the file
@@ -46,7 +43,6 @@ for line in text_file: #read line in the file
 
 text_file.close()
 
-
 #Note that in order to save time we only create embeddings for the words needed in the TOEFL task
 
     #Find all unique words amongst TOEFL tasks and initialize their embeddings to zeros    
@@ -54,8 +50,7 @@ number_of_tests = 0
 text_file = open(test_name, "r") #open TOEFL tasks
 for line in text_file:
         words = line.split()
-        words = [lemmatizer.lemmatize(lemmatizer.lemmatize(lemmatizer.lemmatize(word, 'v'), 'n'), 'a') for word in
-                 words] # lemmatize words in the current test
+        words = [lemmatizer.lemmatize(lemmatizer.lemmatize(lemmatizer.lemmatize(word, 'v'), 'n'), 'a') for word in words] # lemmatize words in the current test
         word_space[words[0]] = np.zeros(dimension)
         word_space[words[1]] = np.zeros(dimension)
         word_space[words[2]] = np.zeros(dimension)
@@ -96,19 +91,14 @@ while line != "":
                             if k != 1: #if one word on the left was already added
                                 word_space[words[i]] = np.add(word_space[words[i]], np.roll(dictionary[lines[1][0]], -1)) #update word embedding
                             else:
-                                word_space[words[i]] = np.add(word_space[words[i]],
-                                                              np.roll(dictionary[lines[1][0]], -1)) #update word embedding
-                                word_space[words[i]] = np.add(word_space[words[i]],
-                                                              np.roll(dictionary[lines[0][len(lines[0]) - 1]], -1)) #update word embedding
+                                word_space[words[i]] = np.add(word_space[words[i]], np.roll(dictionary[lines[1][0]], -1)) #update word embedding
+                                word_space[words[i]] = np.add(word_space[words[i]], np.roll(dictionary[lines[0][len(lines[0]) - 1]], -1)) #update word embedding
                         else:
                             if k != 1:
-                                word_space[words[i]] = np.add(word_space[words[i]],
-                                                              np.roll(dictionary[lines[1][len(lines[1]) - 1]], -1)) #update word embedding
+                                word_space[words[i]] = np.add(word_space[words[i]], np.roll(dictionary[lines[1][len(lines[1]) - 1]], -1)) #update word embedding
                             else:
-                                word_space[words[i]] = np.add(word_space[words[i]],
-                                                              np.roll(dictionary[lines[1][len(lines[1]) - 1]], -1)) #update word embedding
-                                word_space[words[i]] = np.add(word_space[words[i]],
-                                                              np.roll(dictionary[lines[1][len(lines[1]) - 2]], -1)) #update word embedding
+                                word_space[words[i]] = np.add(word_space[words[i]], np.roll(dictionary[lines[1][len(lines[1]) - 1]], -1)) #update word embedding
+                                word_space[words[i]] = np.add(word_space[words[i]], np.roll(dictionary[lines[1][len(lines[1]) - 2]], -1)) #update word embedding
 
                     k = 1
                     while (i + k < length) and (k <= window_size): #process right neighbors of the focus word
@@ -126,14 +116,10 @@ while line != "":
                                 word_space[words[i]] = np.add(word_space[words[i]], np.roll(dictionary[lines[3][0]], 1)) #update word embedding
                             else:
                                 word_space[words[i]] = np.add(word_space[words[i]], np.roll(dictionary[lines[3][0]], 1)) #update word embedding
-                                word_space[words[i]] = np.add(word_space[words[i]],
-                                                          np.roll(dictionary[lines[3][1]], 1))
-
+                                word_space[words[i]] = np.add(word_space[words[i]], np.roll(dictionary[lines[3][1]], 1))
                 i += 1
             lines.pop(0)
         line = text_file.readline()
-
-
 
 #Testing of the embeddings on TOEFL
 a = 0.0 # accuracy of the encodings    
@@ -144,8 +130,7 @@ number_skipped_tests = 0.0 # some tests could be skipped if there are no corresp
 while i < number_of_tests:
         line = text_file.readline() #read line in the file
         words = line.split()  # extract words from the line
-        words = [lemmatizer.lemmatize(lemmatizer.lemmatize(lemmatizer.lemmatize(word, 'v'), 'n'), 'a') for word in
-                  words]  # lemmatize words in the current test
+        words = [lemmatizer.lemmatize(lemmatizer.lemmatize(lemmatizer.lemmatize(word, 'v'), 'n'), 'a') for word in words]  # lemmatize words in the current test
         try:
             
             if not(amount_dictionary.get(words[0]) is None): # check if there word in the corpus for the query word
@@ -156,8 +141,7 @@ while i < number_of_tests:
                     if np.array_equal(word_space[words[k]], zero_vector): # if no representation was learnt assign a random vector
                         word_space[words[k]] = np.random.randn(dimension)
                     k += 1
-                right_answers += tf.get_answer_mod([word_space[words[0]],word_space[words[1]],word_space[words[2]],
-                            word_space[words[3]],word_space[words[4]]]) #check if word is predicted right
+                right_answers += tf.get_answer_mod([word_space[words[0]],word_space[words[1]],word_space[words[2]], word_space[words[3]],word_space[words[4]]]) #check if word is predicted right
         except KeyError: # if there is no representation for the query vector than skip
             number_skipped_tests += 1
             print("skipped test: " + str(i) + "; Line: " + str(words))
@@ -170,6 +154,4 @@ while i < number_of_tests:
 text_file.close()
 a += 100 * right_answers / number_of_tests
 print(str(dimension) + " Percentage of correct answers: " + str(100 * right_answers / number_of_tests) + "%")
-
-
 
