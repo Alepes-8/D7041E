@@ -5,13 +5,6 @@ import nltk
 
 #@author: The first version of this code is the courtesy of Vadim Selyanik
 
-import os
-
-cwd = os.getcwd()  # Get the current working directory (cwd)
-files = os.listdir(cwd)  # Get all the files in that directory
-print("Files in %r: %s" % (cwd, files))
-
-
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 lemmatizer = nltk.WordNetLemmatizer() # create a lemmatizer
 
