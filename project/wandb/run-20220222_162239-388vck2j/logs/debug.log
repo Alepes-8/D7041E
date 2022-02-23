@@ -1,0 +1,169 @@
+2022-02-22 16:22:39,523 INFO    MainThread:1544 [wandb_setup.py:_flush():75] Loading settings from C:\Users\alexp\.config\wandb\settings
+2022-02-22 16:22:39,524 INFO    MainThread:1544 [wandb_setup.py:_flush():75] Loading settings from e:\skola\2021-2022\LP3\D7041E\D7041E\project\wandb\settings
+2022-02-22 16:22:39,524 INFO    MainThread:1544 [wandb_setup.py:_flush():75] Loading settings from environment variables: {}
+2022-02-22 16:22:39,524 INFO    MainThread:1544 [wandb_setup.py:_flush():75] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2022-02-22 16:22:39,524 WARNING MainThread:1544 [wandb_setup.py:_flush():75] interrupted
+Traceback (most recent call last):
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\IPython\core\interactiveshell.py", line 3444, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\alexp\AppData\Local\Temp/ipykernel_1544/3937055912.py", line 1, in <module>
+    wandb.init()
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\wandb_init.py", line 973, in init
+    raise e
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\wandb_init.py", line 948, in init
+    wi.setup(kwargs)
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\wandb_init.py", line 189, in setup
+    wandb_login._login(
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\wandb_login.py", line 284, in _login
+    wlogin.prompt_api_key()
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\wandb_login.py", line 212, in prompt_api_key
+    key, status = self._prompt_api_key()
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\wandb_login.py", line 192, in _prompt_api_key
+    key = apikey.prompt_api_key(
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\lib\apikey.py", line 122, in prompt_api_key
+    key = input_callback(api_ask).strip()
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\ipykernel\kernelbase.py", line 988, in getpass
+    return self._input_request(
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\ipykernel\kernelbase.py", line 1051, in _input_request
+    raise KeyboardInterrupt("Interrupted by user") from None
+KeyboardInterrupt: Interrupted by user
+2022-02-22 16:22:39,525 WARNING MainThread:1544 [wandb_setup.py:_flush():75] interrupted
+Traceback (most recent call last):
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\IPython\core\interactiveshell.py", line 3444, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\alexp\AppData\Local\Temp/ipykernel_1544/1964400336.py", line 1, in <module>
+    wandb.init()
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\wandb_init.py", line 973, in init
+    raise e
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\wandb_init.py", line 948, in init
+    wi.setup(kwargs)
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\wandb_init.py", line 189, in setup
+    wandb_login._login(
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\wandb_login.py", line 284, in _login
+    wlogin.prompt_api_key()
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\wandb_login.py", line 212, in prompt_api_key
+    key, status = self._prompt_api_key()
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\wandb_login.py", line 192, in _prompt_api_key
+    key = apikey.prompt_api_key(
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\lib\apikey.py", line 122, in prompt_api_key
+    key = input_callback(api_ask).strip()
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\ipykernel\kernelbase.py", line 988, in getpass
+    return self._input_request(
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\ipykernel\kernelbase.py", line 1051, in _input_request
+    raise KeyboardInterrupt("Interrupted by user") from None
+KeyboardInterrupt: Interrupted by user
+2022-02-22 16:22:39,525 WARNING MainThread:1544 [wandb_setup.py:_flush():75] interrupted
+Traceback (most recent call last):
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\IPython\core\interactiveshell.py", line 3444, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\alexp\AppData\Local\Temp/ipykernel_1544/1269919891.py", line 1, in <module>
+    wandb.init()
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\wandb_init.py", line 973, in init
+    raise e
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\wandb_init.py", line 948, in init
+    wi.setup(kwargs)
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\wandb_init.py", line 189, in setup
+    wandb_login._login(
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\wandb_login.py", line 284, in _login
+    wlogin.prompt_api_key()
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\wandb_login.py", line 212, in prompt_api_key
+    key, status = self._prompt_api_key()
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\wandb_login.py", line 192, in _prompt_api_key
+    key = apikey.prompt_api_key(
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\wandb\sdk\lib\apikey.py", line 122, in prompt_api_key
+    key = input_callback(api_ask).strip()
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\ipykernel\kernelbase.py", line 988, in getpass
+    return self._input_request(
+  File "E:\skola\code\New folder\envs\ann2test\lib\site-packages\ipykernel\kernelbase.py", line 1051, in _input_request
+    raise KeyboardInterrupt("Interrupted by user") from None
+KeyboardInterrupt: Interrupted by user
+2022-02-22 16:22:39,526 INFO    MainThread:1544 [wandb_setup.py:_flush():75] Applying login settings: {'api_key': '***REDACTED***'}
+2022-02-22 16:22:39,526 INFO    MainThread:1544 [wandb_init.py:_log_setup():386] Logging user logs to e:\skola\2021-2022\LP3\D7041E\D7041E\project\wandb\run-20220222_162239-388vck2j\logs\debug.log
+2022-02-22 16:22:39,526 INFO    MainThread:1544 [wandb_init.py:_log_setup():387] Logging internal logs to e:\skola\2021-2022\LP3\D7041E\D7041E\project\wandb\run-20220222_162239-388vck2j\logs\debug-internal.log
+2022-02-22 16:22:39,526 INFO    MainThread:1544 [wandb_init.py:_jupyter_setup():336] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000002975279EF40>
+2022-02-22 16:22:39,526 INFO    MainThread:1544 [wandb_init.py:init():420] calling init triggers
+2022-02-22 16:22:39,526 INFO    MainThread:1544 [wandb_init.py:init():425] wandb.init called with sweep_config: {}
+config: {}
+2022-02-22 16:22:39,526 INFO    MainThread:1544 [wandb_init.py:init():471] starting backend
+2022-02-22 16:22:39,526 INFO    MainThread:1544 [backend.py:_multiprocessing_setup():99] multiprocessing start_methods=spawn, using: spawn
+2022-02-22 16:22:39,529 INFO    MainThread:1544 [backend.py:ensure_launched():219] starting backend process...
+2022-02-22 16:22:39,592 INFO    MainThread:1544 [backend.py:ensure_launched():224] started backend process with pid: 23000
+2022-02-22 16:22:39,593 INFO    MainThread:1544 [wandb_init.py:init():480] backend started and connected
+2022-02-22 16:22:40,812 INFO    MainThread:1544 [wandb_run.py:_label_probe_notebook():921] probe notebook
+2022-02-22 16:22:40,813 INFO    MainThread:1544 [wandb_run.py:_label_probe_notebook():931] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2022-02-22 16:22:40,813 INFO    MainThread:1544 [wandb_init.py:init():550] updated telemetry
+2022-02-22 16:22:40,889 INFO    MainThread:1544 [wandb_init.py:init():581] communicating current version
+2022-02-22 16:22:41,139 INFO    MainThread:1544 [wandb_init.py:init():586] got version response 
+2022-02-22 16:22:41,139 INFO    MainThread:1544 [wandb_init.py:init():596] communicating run to backend with 30 second timeout
+2022-02-22 16:22:41,435 INFO    MainThread:1544 [wandb_init.py:init():624] starting run threads in backend
+2022-02-22 16:22:43,533 INFO    MainThread:1544 [wandb_run.py:_console_start():1827] atexit reg
+2022-02-22 16:22:43,573 INFO    MainThread:1544 [wandb_run.py:_redirect():1701] redirect: SettingsConsole.WRAP
+2022-02-22 16:22:43,573 INFO    MainThread:1544 [wandb_run.py:_redirect():1738] Wrapping output streams.
+2022-02-22 16:22:43,574 INFO    MainThread:1544 [wandb_run.py:_redirect():1762] Redirects installed.
+2022-02-22 16:22:43,575 INFO    MainThread:1544 [wandb_init.py:init():651] run started, returning control to user process
+2022-02-22 16:22:43,575 INFO    MainThread:1544 [wandb_config.py:__setitem__():144] config set max_len = 11 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x0000029752A68880>>
+2022-02-22 16:22:43,575 INFO    MainThread:1544 [wandb_run.py:_config_callback():966] config_cb max_len 11 None
+2022-02-22 16:22:43,575 INFO    MainThread:1544 [wandb_config.py:__setitem__():144] config set buckets = 20 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x0000029752A68880>>
+2022-02-22 16:22:43,575 INFO    MainThread:1544 [wandb_run.py:_config_callback():966] config_cb buckets 20 None
+2022-02-22 16:22:43,594 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-22 16:22:43,594 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 11:04:37,152 INFO    MainThread:1544 [wandb_init.py:_resume_backend():308] resuming backend
+2022-02-23 11:04:40,068 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-23 11:04:40,068 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 11:04:50,526 INFO    MainThread:1544 [wandb_init.py:_resume_backend():308] resuming backend
+2022-02-23 11:04:50,526 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-23 11:04:50,526 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 11:04:50,577 INFO    MainThread:1544 [wandb_init.py:_resume_backend():308] resuming backend
+2022-02-23 11:04:50,580 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-23 11:04:50,580 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 11:05:11,661 INFO    MainThread:1544 [wandb_init.py:_resume_backend():308] resuming backend
+2022-02-23 11:05:11,663 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-23 11:05:11,663 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 11:05:19,826 INFO    MainThread:1544 [wandb_init.py:_resume_backend():308] resuming backend
+2022-02-23 11:05:19,956 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-23 11:05:19,956 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 11:05:21,534 INFO    MainThread:1544 [wandb_init.py:_resume_backend():308] resuming backend
+2022-02-23 11:05:21,535 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-23 11:05:21,535 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 11:05:23,023 INFO    MainThread:1544 [wandb_init.py:_resume_backend():308] resuming backend
+2022-02-23 11:05:23,023 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-23 11:05:23,023 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 11:05:23,068 INFO    MainThread:1544 [wandb_init.py:_resume_backend():308] resuming backend
+2022-02-23 11:05:23,071 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-23 11:05:23,071 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 11:05:23,122 INFO    MainThread:1544 [wandb_init.py:_resume_backend():308] resuming backend
+2022-02-23 11:05:23,139 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-23 11:05:23,139 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 11:05:43,480 INFO    MainThread:1544 [wandb_init.py:_resume_backend():308] resuming backend
+2022-02-23 11:05:43,687 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-23 11:05:43,687 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 11:05:46,274 INFO    MainThread:1544 [wandb_init.py:_resume_backend():308] resuming backend
+2022-02-23 11:05:46,277 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-23 11:05:46,277 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 11:05:47,404 INFO    MainThread:1544 [wandb_init.py:_resume_backend():308] resuming backend
+2022-02-23 11:05:47,422 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-23 11:05:47,422 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 11:06:30,851 INFO    MainThread:1544 [wandb_init.py:_resume_backend():308] resuming backend
+2022-02-23 11:06:30,852 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-23 11:06:30,852 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 11:06:32,767 INFO    MainThread:1544 [wandb_init.py:_resume_backend():308] resuming backend
+2022-02-23 11:06:32,770 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-23 11:06:32,770 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 11:06:34,540 INFO    MainThread:1544 [wandb_init.py:_resume_backend():308] resuming backend
+2022-02-23 11:06:34,554 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-23 11:06:34,555 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 11:06:59,497 INFO    MainThread:1544 [wandb_init.py:_resume_backend():308] resuming backend
+2022-02-23 11:06:59,497 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-23 11:06:59,497 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 11:07:02,096 INFO    MainThread:1544 [wandb_init.py:_resume_backend():308] resuming backend
+2022-02-23 11:07:02,099 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-23 11:07:02,099 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 11:07:04,092 INFO    MainThread:1544 [wandb_init.py:_resume_backend():308] resuming backend
+2022-02-23 11:07:04,108 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-23 11:07:04,108 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 11:07:33,552 INFO    MainThread:1544 [wandb_init.py:_resume_backend():308] resuming backend
+2022-02-23 11:07:33,599 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-23 11:07:33,599 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
+2022-02-23 11:08:13,106 INFO    MainThread:1544 [wandb_init.py:_resume_backend():308] resuming backend
+2022-02-23 11:08:14,463 INFO    MainThread:1544 [wandb_init.py:_pause_backend():299] pausing backend
+2022-02-23 11:08:14,463 INFO    MainThread:1544 [jupyter.py:save_ipynb():374] not saving jupyter notebook
